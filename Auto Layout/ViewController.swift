@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBAction func unwindToLoginViewController(_ segue: UIStoryboardSegue) {
+        print("Unwind to Root View Controller")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

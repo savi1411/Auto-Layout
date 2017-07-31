@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D168DA541F2CC45D00183E8F /* CursosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D168DA531F2CC45D00183E8F /* CursosViewController.swift */; };
 		D1D6420B1F2BADC1004F23E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D6420A1F2BADC1004F23E4 /* AppDelegate.swift */; };
 		D1D6420D1F2BADC1004F23E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D6420C1F2BADC1004F23E4 /* ViewController.swift */; };
 		D1D642101F2BADC1004F23E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1D6420E1F2BADC1004F23E4 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D168DA531F2CC45D00183E8F /* CursosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursosViewController.swift; sourceTree = "<group>"; };
 		D1D642071F2BADC1004F23E4 /* Auto Layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auto Layout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D6420A1F2BADC1004F23E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1D6420C1F2BADC1004F23E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				D1D6420A1F2BADC1004F23E4 /* AppDelegate.swift */,
 				D1D6420C1F2BADC1004F23E4 /* ViewController.swift */,
+				D168DA531F2CC45D00183E8F /* CursosViewController.swift */,
 				D1D6420E1F2BADC1004F23E4 /* Main.storyboard */,
 				D1D642111F2BADC1004F23E4 /* Assets.xcassets */,
 				D1D642131F2BADC1004F23E4 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				D1D6420D1F2BADC1004F23E4 /* ViewController.swift in Sources */,
 				D1D6420B1F2BADC1004F23E4 /* AppDelegate.swift in Sources */,
+				D168DA541F2CC45D00183E8F /* CursosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +306,7 @@
 				D1D6421B1F2BADC1004F23E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

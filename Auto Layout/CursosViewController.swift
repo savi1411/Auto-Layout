@@ -12,12 +12,28 @@ class CursosViewController: UIViewController {
     
     // MARK: Propriedades
     
-    // As propriedades serão inicializadas através de closures
+    /*
+     PROPRIEDADES DEFINIDAS NA FORMA TRADICIONAL
+     Utilizar na 1ª parte do curso, deixando a forma de definição por closure mais para o final
+    */
+ 
+    // Define propriedades que seão utilizadas para definir os elementos visuais programaticamente
     
     // Teremos uma StackView com 3 imagens dentro
     //  E um label com o copyright da Alura
+    let imagemSwift = UIImageView()
+    let imagemObjC = UIImageView()
+    let imagemLayout = UIImageView()
+    let stackView = UIStackView()
+    let labelAlura = UILabel()
     
-    // Imagem da esquerda - curso de Swift
+    /*
+     PROPRIEDADES DEFINIDAS EM FORMA DE CLOSURE
+     Manter comentado na 1ª parte do curso
+     Utilizar mais para o final do curso, comentando a forma tradicional
+
+    // Teremos uma StackView com 3 imagens dentro
+    //  E um label com o copyright da Alura
     let swiftImageView: UIImageView = {
         let theImageView = UIImageView()
         theImageView.image = UIImage(named: "Swift.png")
@@ -50,7 +66,6 @@ class CursosViewController: UIViewController {
         theStackView.spacing = 8.0
         return theStackView
     }()
-
     
     // Agora o Label de Copyright da Alura
     let aluraLabel: UILabel = {
@@ -61,48 +76,97 @@ class CursosViewController: UIViewController {
         theLabel.translatesAutoresizingMaskIntoConstraints = false
         return theLabel
     }()
+    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
+        // Inicializa as propriedades dos elementos visuais
+        inicializaPropriedades()
+        
         // Monta o Stack View, com as 3 imagens em seu interior
-        stackView.addArrangedSubview(swiftImageView)
-        stackView.addArrangedSubview(objcImageView)
-        stackView.addArrangedSubview(layoutImageView)
+        stackView.addArrangedSubview(imagemSwift)
+        stackView.addArrangedSubview(imagemObjC)
+        stackView.addArrangedSubview(imagemLayout)
+        
+        // Indica que as constraints serão definidas programaticamente
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
+        // Adiciona os elementos visuais à superview
         self.view.addSubview(stackView)
+        self.view.addSubview(labelAlura)
         
-        // Adiciona o label à superview
-        self.view.addSubview(aluraLabel)
+        // Adiciona as constraints aos elementos visuais, de forma programada
+        adicionaConstraints()
         
-        /*
-            NSLayoutConstraint
-            Os métodos dessa classe convertem explicitamente uma equação de constraint em código. 
-            Cada parâmetro corresponde a uma parte da equação
-            Você deve especificar um valor para cada parâmetro, mesmo que aquele parâmetro não afete o layout
-            A vantagem do método é visualizar a constraint como se ela estivesse sendo construído no Interface Builder
-            A desvantagem é a quantidade considerável de código necessária, o que pode dificultar o entendimento
-        */
- 
-        /*
-            ANATOMIA DE UMA CONSTRAINT
-            Uma constraint é construída a partir de uma equação linear. Com isso em mente, o nosso papel será decifrar os argumentos a serem utilizados na classe NSLayoutConstraint
-            Os parâmetros são os seguintes:
-            - o item esquerdo da equação
-            - o atributo do item que receberá a regra
-            - o relacioamento com o outro item
-            - o lado direito da equação
-            - o atributo do lado direito
-            - o multiplicador da constraint
-            - a constante da constraint
-        
-        */
+    }
 
-        // Vamos começar pelo StackView
- 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: Funções de Apoio
+    func inicializaPropriedades() {
+        
+        // Função para inicializar os elementos visuais indicar que as constraints serão definidas programaticamente
+        
+        // Imagem à esquerda do StackView
+        imagemSwift.image = UIImage(named: "Swift.png")
+        imagemSwift.translatesAutoresizingMaskIntoConstraints = false
+
+        // Imagem ap centro do Stack View
+        imagemObjC.image = UIImage(named: "Objective-C.png")
+        imagemObjC.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Imagem à direita do StackView
+        imagemLayout.image = UIImage(named: "Layout.png")
+        imagemLayout.translatesAutoresizingMaskIntoConstraints = false
+
+        // A Stack que irá abraçar as imagens
+        stackView.axis = UILayoutConstraintAxis.horizontal
+        stackView.distribution = UIStackViewDistribution.equalSpacing
+        stackView.alignment = UIStackViewAlignment.center
+        stackView.spacing = 8.0
+
+        // Agora o Label de Copyright da Alura
+        labelAlura.font = UIFont.systemFont(ofSize: 17.0)
+        //theLabel.textColor = UIColor(red: 76, green: 76, blue: 76, alpha: 1)
+        labelAlura.text = "© 2017 - Alura Treinamentos LTDA"
+        labelAlura.translatesAutoresizingMaskIntoConstraints = false
+
+    }
+    
+    // Função para adiconar as constraints aos elementos visuais, de forma programada
+    func adicionaConstraints() {
+        
+        /*
+         NSLayoutConstraint
+         Os métodos dessa classe convertem explicitamente uma equação de constraint em código.
+         Cada parâmetro corresponde a uma parte da equação
+         Você deve especificar um valor para cada parâmetro, mesmo que aquele parâmetro não afete o layout
+         A vantagem do método é visualizar a constraint como se ela estivesse sendo construído no Interface Builder
+         A desvantagem é a quantidade considerável de código necessária, o que pode dificultar o entendimento
+         */
+        
+        /*
+         ANATOMIA DE UMA CONSTRAINT
+         Uma constraint é construída a partir de uma equação linear. Com isso em mente, o nosso papel será decifrar os argumentos a serem utilizados na classe NSLayoutConstraint
+         Os parâmetros são os seguintes:
+         - o item esquerdo da equação
+         - o atributo do item que receberá a regra
+         - o relacioamento com o outro item
+         - o lado direito da equação
+         - o atributo do lado direito
+         - o multiplicador da constraint
+         - a constante da constraint
+         
+         */
+        
+        // Vamos começar a inserir as constraints pelo StackView
+        
         // Centraliza o Stack na horizontal
         let constraintStackCenterX = NSLayoutConstraint(
             item: stackView,
@@ -132,17 +196,17 @@ class CursosViewController: UIViewController {
         view.addConstraint(constraintStackCenterY)
         
         /*
-            Vamos exercitar a equação com o label da Alura
-            O nosso objetivo com o label é
-            1 - Centralizar horizontalmente (X)
-            2 - Posicioná-lo a 25 pontos da margem inferior (bottom)
+         Vamos exercitar a equação com o label da Alura
+         O nosso objetivo com o label é
+         1 - Centralizar horizontalmente (X)
+         2 - Posicioná-lo a 25 pontos da margem inferior (bottom)
          
-            Observe que o label é o item esquerdo da equação e a view é o lado direito. Na realidade, utilizamos a diretiva bottomLayoutGuide, que representa o rodapé da view
-        */
+         Observe que o label é o item esquerdo da equação e a view é o lado direito. Na realidade, utilizamos a diretiva bottomLayoutGuide, que representa o rodapé da view
+         */
         
         // Primeiro centraliza na horizontal
         let constraintLabelCenterX = NSLayoutConstraint(
-            item: aluraLabel,
+            item: labelAlura,
             attribute: .centerX,
             relatedBy: .equal,
             toItem: view,
@@ -159,7 +223,7 @@ class CursosViewController: UIViewController {
             item: bottomLayoutGuide,
             attribute: .top,
             relatedBy: .equal,
-            toItem: aluraLabel,
+            toItem: labelAlura,
             attribute: .bottom,
             multiplier: 1.0,
             constant: 25.0
@@ -169,12 +233,6 @@ class CursosViewController: UIViewController {
         view.addConstraint(constraintLabelBottom)
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation

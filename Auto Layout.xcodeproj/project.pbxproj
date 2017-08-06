@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D168DA541F2CC45D00183E8F /* CursosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D168DA531F2CC45D00183E8F /* CursosViewController.swift */; };
+		D1BCE5DF1F325E4600C2AF9C /* CursosViewControllerAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BCE5DE1F325E4600C2AF9C /* CursosViewControllerAnchor.swift */; };
+		D1BCE5E11F325E5C00C2AF9C /* CursosViewControllerNSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BCE5E01F325E5C00C2AF9C /* CursosViewControllerNSLayoutConstraint.swift */; };
+		D1BCE5E31F325E7500C2AF9C /* CursosViewControllerVFL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BCE5E21F325E7500C2AF9C /* CursosViewControllerVFL.swift */; };
 		D1D6420B1F2BADC1004F23E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D6420A1F2BADC1004F23E4 /* AppDelegate.swift */; };
 		D1D6420D1F2BADC1004F23E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D6420C1F2BADC1004F23E4 /* ViewController.swift */; };
 		D1D642101F2BADC1004F23E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1D6420E1F2BADC1004F23E4 /* Main.storyboard */; };
@@ -16,7 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D168DA531F2CC45D00183E8F /* CursosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursosViewController.swift; sourceTree = "<group>"; };
+		D1BCE5DE1F325E4600C2AF9C /* CursosViewControllerAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursosViewControllerAnchor.swift; sourceTree = "<group>"; };
+		D1BCE5E01F325E5C00C2AF9C /* CursosViewControllerNSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursosViewControllerNSLayoutConstraint.swift; sourceTree = "<group>"; };
+		D1BCE5E21F325E7500C2AF9C /* CursosViewControllerVFL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursosViewControllerVFL.swift; sourceTree = "<group>"; };
 		D1D642071F2BADC1004F23E4 /* Auto Layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auto Layout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D6420A1F2BADC1004F23E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1D6420C1F2BADC1004F23E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,11 +64,13 @@
 			children = (
 				D1D6420A1F2BADC1004F23E4 /* AppDelegate.swift */,
 				D1D6420C1F2BADC1004F23E4 /* ViewController.swift */,
-				D168DA531F2CC45D00183E8F /* CursosViewController.swift */,
 				D1D6420E1F2BADC1004F23E4 /* Main.storyboard */,
 				D1D642111F2BADC1004F23E4 /* Assets.xcassets */,
 				D1D642131F2BADC1004F23E4 /* LaunchScreen.storyboard */,
 				D1D642161F2BADC1004F23E4 /* Info.plist */,
+				D1BCE5DE1F325E4600C2AF9C /* CursosViewControllerAnchor.swift */,
+				D1BCE5E01F325E5C00C2AF9C /* CursosViewControllerNSLayoutConstraint.swift */,
+				D1BCE5E21F325E7500C2AF9C /* CursosViewControllerVFL.swift */,
 			);
 			path = "Auto Layout";
 			sourceTree = "<group>";
@@ -142,9 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1BCE5DF1F325E4600C2AF9C /* CursosViewControllerAnchor.swift in Sources */,
+				D1BCE5E11F325E5C00C2AF9C /* CursosViewControllerNSLayoutConstraint.swift in Sources */,
 				D1D6420D1F2BADC1004F23E4 /* ViewController.swift in Sources */,
 				D1D6420B1F2BADC1004F23E4 /* AppDelegate.swift in Sources */,
-				D168DA541F2CC45D00183E8F /* CursosViewController.swift in Sources */,
+				D1BCE5E31F325E7500C2AF9C /* CursosViewControllerVFL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +277,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z52C2D469B;
 				INFOPLIST_FILE = "Auto Layout/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saviT.Auto-Layout";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -282,6 +291,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z52C2D469B;
 				INFOPLIST_FILE = "Auto Layout/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saviT.Auto-Layout";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D1BCE5DF1F325E4600C2AF9C /* CursosViewControllerAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BCE5DE1F325E4600C2AF9C /* CursosViewControllerAnchor.swift */; };
-		D1BCE5E11F325E5C00C2AF9C /* CursosViewControllerNSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BCE5E01F325E5C00C2AF9C /* CursosViewControllerNSLayoutConstraint.swift */; };
-		D1BCE5E31F325E7500C2AF9C /* CursosViewControllerVFL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BCE5E21F325E7500C2AF9C /* CursosViewControllerVFL.swift */; };
+		D17D04CD1F41DF9F0031927A /* CursoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D04CC1F41DF9F0031927A /* CursoTableViewCell.swift */; };
+		D17D04CF1F41DFD60031927A /* CursoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D04CE1F41DFD60031927A /* CursoTableViewController.swift */; };
+		D17D04D11F41EF240031927A /* Curso.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17D04D01F41EF240031927A /* Curso.swift */; };
 		D1D6420B1F2BADC1004F23E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D6420A1F2BADC1004F23E4 /* AppDelegate.swift */; };
 		D1D6420D1F2BADC1004F23E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D6420C1F2BADC1004F23E4 /* ViewController.swift */; };
 		D1D642101F2BADC1004F23E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1D6420E1F2BADC1004F23E4 /* Main.storyboard */; };
@@ -18,9 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D1BCE5DE1F325E4600C2AF9C /* CursosViewControllerAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursosViewControllerAnchor.swift; sourceTree = "<group>"; };
-		D1BCE5E01F325E5C00C2AF9C /* CursosViewControllerNSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursosViewControllerNSLayoutConstraint.swift; sourceTree = "<group>"; };
-		D1BCE5E21F325E7500C2AF9C /* CursosViewControllerVFL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursosViewControllerVFL.swift; sourceTree = "<group>"; };
+		D17D04CC1F41DF9F0031927A /* CursoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursoTableViewCell.swift; sourceTree = "<group>"; };
+		D17D04CE1F41DFD60031927A /* CursoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursoTableViewController.swift; sourceTree = "<group>"; };
+		D17D04D01F41EF240031927A /* Curso.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curso.swift; sourceTree = "<group>"; };
 		D1D642071F2BADC1004F23E4 /* Auto Layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Auto Layout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D6420A1F2BADC1004F23E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1D6420C1F2BADC1004F23E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,14 +63,14 @@
 			isa = PBXGroup;
 			children = (
 				D1D6420A1F2BADC1004F23E4 /* AppDelegate.swift */,
+				D17D04D01F41EF240031927A /* Curso.swift */,
 				D1D6420C1F2BADC1004F23E4 /* ViewController.swift */,
+				D17D04CE1F41DFD60031927A /* CursoTableViewController.swift */,
+				D17D04CC1F41DF9F0031927A /* CursoTableViewCell.swift */,
 				D1D6420E1F2BADC1004F23E4 /* Main.storyboard */,
 				D1D642111F2BADC1004F23E4 /* Assets.xcassets */,
 				D1D642131F2BADC1004F23E4 /* LaunchScreen.storyboard */,
 				D1D642161F2BADC1004F23E4 /* Info.plist */,
-				D1BCE5DE1F325E4600C2AF9C /* CursosViewControllerAnchor.swift */,
-				D1BCE5E01F325E5C00C2AF9C /* CursosViewControllerNSLayoutConstraint.swift */,
-				D1BCE5E21F325E7500C2AF9C /* CursosViewControllerVFL.swift */,
 			);
 			path = "Auto Layout";
 			sourceTree = "<group>";
@@ -148,11 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1BCE5DF1F325E4600C2AF9C /* CursosViewControllerAnchor.swift in Sources */,
-				D1BCE5E11F325E5C00C2AF9C /* CursosViewControllerNSLayoutConstraint.swift in Sources */,
+				D17D04D11F41EF240031927A /* Curso.swift in Sources */,
+				D17D04CF1F41DFD60031927A /* CursoTableViewController.swift in Sources */,
 				D1D6420D1F2BADC1004F23E4 /* ViewController.swift in Sources */,
 				D1D6420B1F2BADC1004F23E4 /* AppDelegate.swift in Sources */,
-				D1BCE5E31F325E7500C2AF9C /* CursosViewControllerVFL.swift in Sources */,
+				D17D04CD1F41DF9F0031927A /* CursoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
